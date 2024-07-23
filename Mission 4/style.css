@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+    --main-color: hsla(152, 85%, 51%, 0.726);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    background-color: gainsboro;
+}
+
+h1 {
+    margin: 20px 0;
+    font-size: 42px;
+    color: brown;
+}
+
+/* calender */
+
+.calendar {
+    position: relative;
+    border-radius: 10px;
+    width: 300px;
+    height: 300px;
+}
+
+.calendar_select input {
+    width: 200px;
+    height: 35px;
+    padding: 5px;
+}
+
+.calendar_select input:focus {
+    border: 2px solid midnightblue;
+}
+
+.calendar_area {
+    display: block;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    border-radius: 30%;
+}
+
+.calendar_area.hide {
+    display: none;
+}
+
+/* calender nav */
+
+.calendar_nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    padding: 20px;
+    background-color: var(--main-color);
+    border-radius: 20px 20px 0 0;
+    text-align: center;
+}
+
+.calendar_nav button#prev {
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin-top: 12px;
+    border-bottom: 12px solid var(--main-color);
+    border-top: 12px solid var(--main-color);
+    border-left: 12px solid var(--main-color);
+    border-right: 12px solid white;
+}
+
+.calendar_nav button#next {
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin-top: 12px;
+    border-bottom: 12px solid var(--main-color);
+    border-top: 12px solid var(--main-color);
+    border-right: 12px solid var(--main-color);
+    border-left: 12px solid white
+}
+
+.calendar_nav span {
+    display: block;
+    font-size: 16px;
+    color: white;
+}
+
+.calendar_nav .calendar_month {
+    margin-bottom: 5px;
+    font-size: 24px;
+}
+
+/* calendar grid */
+
+.calendar_grid {
+    padding: 15px;
+    border-radius: 0 0 20px 20px;
+    background-color: white;
+}
+
+.calendar_grid ul {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+}
+
+.calendar_grid ul li {
+    padding: 15px 10px;
+    cursor: pointer;
+}
+
+.calendar_grid ul li.today {
+    border: 1px solid var(--main-color);
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+.calendar_grid ul li:nth-child(7n+1) {
+    color: red;
+}
+
+.not_today {
+    color: gainsboro !important;
+}
+
+.select {
+    background-color: var(--main-color);
+    color: white;
+    border-radius: 50%;
+    font-weight: bold;
+}

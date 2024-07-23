@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar & DatePicker</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./style.css">
+    <script type="module" src="./app.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Date Picker</h1>
+        <div class="calendar">
+            <div class="calendar_select">
+                <input type="text" class="date_picker" id="datePicker" placeholder="select date" readonly>
+            </div>
+            <div class="calendar_area">
+                <div class="calendar_nav">
+                    <button class="btn_prev" id="prev"></button>
+                    <div>
+                        <span class="calendar_month"></span>
+                        <span class="calendar_year"></span>
+                    </div>
+                    <button class="btn_next" id="next"></button>
+                </div>
+                <div class="calendar_grid">
+                    <ul class="calendar_day">
+                        <li>SUN</li>
+                        <li>MON</li>
+                        <li>TUE</li>
+                        <li>WED</li>
+                        <li>THU</li>
+                        <li>FRI</li>
+                        <li>SAT</li>
+                    </ul>
+                    <ul class="calendar_date"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
